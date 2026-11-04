@@ -18,4 +18,9 @@ Tether is supported by:
 Our best bet at achieving seperation of concerns within our build is by using the MVVM architecture pattern.  
 Here's a resource to familarize yourself with MVVM in Flutter. [https://www.youtube.com/watch?v=zQcTrCFV-KU]  
 In a nutshell...  
-Model:
+
+
+Model:  
+    -The data access layer. This is where we will make API calls to Firebase and Cloudflare
+    -Also stores our custom datatype definitions (Post, Chat, User, etc).
+    
