@@ -21,6 +21,7 @@ In a nutshell...
 
 
 Model:  
-    -The data access layer. This is where we will make API calls to Firebase and Cloudflare
-    -Also stores our custom datatype definitions (Post, Chat, User, etc).
+
+    - The data access layer. This is where we will make API calls to Firebase and Cloudflare
+    - Also stores our custom datatype definitions (Post, Chat, User, etc).
     
