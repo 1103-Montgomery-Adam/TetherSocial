@@ -13,3 +13,9 @@ Tether is supported by:
 ## Prerequisites
 1. Install the Flutter SDK. [https://docs.flutter.dev/learn/pathway/quick-install]
 
+
+## Building Architecture
+Our best bet at achieving seperation of concerns within our build is by using the MVVM architecture pattern.  
+Here's a resource to familarize yourself with MVVM in Flutter. [https://www.youtube.com/watch?v=zQcTrCFV-KU]  
+In a nutshell...  
+Model:
