@@ -36,7 +36,7 @@ Model:
 
 View:
 
-    - Classes strickly involved with rendering UI
+    - Classes strictly involved with rendering UI
     - Shouldn't really be preforming any data logic
     - Should own an instance of it's associated ViewModel
     - Relies on the ViewModel to do actual data stuff
