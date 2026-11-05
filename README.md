@@ -87,3 +87,8 @@ To avoid giant merge conflicts we can do a few things...
 1- Branch and Merge off of the Indev branch, saving main for finalized stable code.  
 2- Make branches small in scope, maybe it's just adding a feature or testing a small piece.  
 3- Merge development branches back into Indev frequently, keeping it up to date.
+
+## Disclosures
+1-Add header comments to files you built (name, date)  
+2-Disclose where copied OR AI code was used  
+3-When your done with something add it to the devlog txt file with a brief description of what you did
