@@ -41,4 +41,15 @@ class CloudStorageService {
       return null; // if download fails
     }
   }
+
+  Future<void> deleteAudio({required String trackId}) async {
+    try {
+      final Reference storageRef = _storage.ref().child('audio/$trackId.mp3');
+      await storageRef.delete();
+      print("Success deleting Cloud storage reference");
+    } catch (e) {
+      print("CloudStorageService Delete Error: $e");
+      throw Exception("Failed to delete audio: $e");
+    }
+  }
 }
