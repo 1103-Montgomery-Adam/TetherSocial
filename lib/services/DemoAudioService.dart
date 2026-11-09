@@ -2,22 +2,24 @@
 
 import 'dart:typed_data';
 import 'package:tether_social/services/CloudflareKeyService.dart';
-
+import 'package:tether_social/services/CloudStorageService.dart';
 // Demo-only service for the audio demo screen.
 class DemoAudioService {
   final CloudflareKeyService _cloudflare = CloudflareKeyService();
-  static final Map<String, Uint8List> _fakeBucket = {};
+  final CloudStorageService _cloudStorage = CloudStorageService(); 
 
+  // fake bucket for stubbing functions
+  static final Map<String, Uint8List> _fakeBucket = {};
   // Placeholder key until real encryption is added.
   static const String _demoKey = '123';
 
   Future<void> upload({required String trackId, required Uint8List audio}) async {
-    _fakeBucket[trackId] = audio; // STUB: replace with Cloud Storage upload
+    await _cloudStorage.uploadAudio(trackId: trackId, audio: audio);
     await _cloudflare.uploadKey(trackId: trackId, encryptionKey: _demoKey);
   }
 
   Future<Uint8List?> download({required String trackId}) async {
-    final audio = _fakeBucket[trackId]; // STUB: replace with Cloud Storage download
+    final audio = await _cloudStorage.downloadAudio(trackId: trackId);
     if (audio == null) return null;
     await _cloudflare.fetchKey(trackId: trackId); // not used yet, shows the Cloudflare step
     return audio;

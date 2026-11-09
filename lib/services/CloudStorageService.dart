@@ -33,10 +33,9 @@ class CloudStorageService {
   Future<Uint8List?> downloadAudio({required String trackId}) async {
     try {
       final Reference storageRef = _storage.ref().child('audio/$trackId.mp3');
-      // 50 mb limit on upload (follows our project reqs)
-      final Uint8List? audioBytes = await storageRef.getData(50 * 1024 * 1024);
+      final Uint8List? audioBytes = await storageRef.getData();
       return audioBytes;
-      
+    
     } catch (e) {
       print("CloudStorageService Download Error: $e");
       return null; // if download fails
