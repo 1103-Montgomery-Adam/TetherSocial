@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 //import'services/CloudflareKeyService.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'services/PostService.dart';
+import 'models/post.dart';
 import 'package:tether_social/services/DemoAudioService.dart';
 import 'package:tether_social/viewmodels/AudioDemoViewModel.dart';
 import 'package:tether_social/views/AudioDemoView.dart';
