@@ -1,14 +1,11 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+//Adam Montgomery
+//November 9th, 2026
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'dart:typed_data';
 import 'package:tether_social/models/post.dart';
+
+//Use "flutter test test/post_test.dart" to run these tests
 
 void main() {
   group("Post Model Tests -", () {
@@ -26,6 +23,19 @@ void main() {
       expect(resultJson.containsKey("audioBytes"), false);
     });
 
-    test()
+    test("fromJson creates a Post object without audioBytes", () {
+      final testPost = Post(
+        postId: "test-123",
+        posterId: "AdamM",
+        audioBytes: Uint8List.fromList([1, 2, 3]),
+      );
+
+      final testJson = testPost.toJson();
+      final translatedPost = Post.fromJson(testJson);
+
+      expect(translatedPost.postId, "test-123");
+      expect(translatedPost.posterId, "AdamM");
+      expect(translatedPost.audioBytes == null, true);
+    });
   });
 }
