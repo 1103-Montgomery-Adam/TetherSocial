@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 //import'services/CloudflareKeyService.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'services/PostService.dart';
+import 'models/post.dart';
+import 'package:tether_social/services/DemoAudioService.dart';
+import 'package:tether_social/viewmodels/AudioDemoViewModel.dart';
+import 'package:tether_social/views/AudioDemoView.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+    // Initialize the app with the audio demo view
     runApp(
-      const MaterialApp(
-        home: Scaffold(
-          body: Center(
-            child: Text("Hello World, this is Tether:)"),
-          ),
-        ),
-      ),
-    );
-
-  
+       MaterialApp(
+      title: 'Tether',
+      home: AudioDemoView(viewModel: AudioDemoViewModel(DemoAudioService())),
+    ),
+  );
 }

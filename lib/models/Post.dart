@@ -10,4 +10,18 @@ class Post {
     required this.posterId,
     this.audioBytes,
   });
+
+  factory Post.fromJson(Map<String, dynamic> json) {
+  return Post(
+    postId: json['postId'] ?? '',
+    posterId: json['posterId'] ?? '',
+  );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'postId': postId,
+      'posterId': posterId,
+    };
+  }
 }
