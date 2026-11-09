@@ -61,7 +61,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/audio/Plants vs. Zombies (Main Theme).mp3
+    - assets/audio/hello_world.mp3
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

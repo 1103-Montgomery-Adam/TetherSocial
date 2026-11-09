@@ -4,6 +4,10 @@ import 'dart:typed_data';
 import 'package:tether_social/services/CloudflareKeyService.dart';
 
 // Demo-only service for the audio demo screen.
+//
+// STORAGE IS A TEMPORARY STUB: audio is kept in memory only (nothing reaches
+// Firebase yet, and it's lost on page refresh). When Cloud Storage code
+// exists, swap the three _fakeBucket lines below for calls to it.
 class DemoAudioService {
   final CloudflareKeyService _cloudflare = CloudflareKeyService();
   static final Map<String, Uint8List> _fakeBucket = {};

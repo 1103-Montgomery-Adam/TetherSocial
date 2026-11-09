@@ -9,7 +9,7 @@ class AudioDemoViewModel extends ChangeNotifier {
   final DemoAudioService _service;
   final AudioPlayer _player = AudioPlayer();
 
-  static const String demoAssetPath = 'assets/audio/Plants vs. Zombies (Main Theme).mp3';
+  static const String demoAssetPath = 'assets/audio/hello_world.mp3';
   static const String demoPostId = 'hello_world_demo';
 
   bool isBusy = false;
