@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 //import'services/CloudflareKeyService.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'services/PostService.dart';
+import 'models/post.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  );
+  );  
+
+  
+  
     runApp(
       const MaterialApp(
         home: Scaffold(
