@@ -11,7 +11,7 @@ class DemoAudioService {
   final CloudStorageService _cloudStorage = CloudStorageService(); 
   final PostService postService = PostService();
   // fake bucket for stubbing functions
-  static final Map<String, Uint8List> _fakeBucket = {};
+  //static final Map<String, Uint8List> _fakeBucket = {};
   // Placeholder key until real encryption is added.
   static const String _demoKey = '123';
 
@@ -25,13 +25,13 @@ class DemoAudioService {
   Future<Uint8List?> download({required String trackId}) async {
     final audio = await _cloudStorage.downloadAudio(trackId: trackId);
     if (audio == null) return null;
-    await _cloudflare.fetchKey(trackId: trackId); // not used yet, shows the Cloudflare st            ep
+    await _cloudflare.fetchKey(trackId: trackId); // not used yet, shows the Cloudflare st
     final post = await postService.downloadPost(postId: trackId); // not used yet 
     return audio;
   }
 
   Future<void> delete({required String trackId}) async {
-    _fakeBucket.remove(trackId); // STUB: replace with Cloud Storage delete
+    await _cloudStorage.deleteAudio(trackId: trackId);
     await _cloudflare.deleteKey(trackId: trackId);
     await postService.deletePost(trackId);
   }

@@ -59,4 +59,10 @@ class AudioDemoViewModel extends ChangeNotifier {
     _player.dispose();
     super.dispose();
   }
+
+  //Added by Adam for unit testing purposes, testing _run closure
+  @visibleForTesting
+  Future<void> testTheWrapper(String message, Future<String> Function() action) {
+    return _run(message, action);
+  }
 }
