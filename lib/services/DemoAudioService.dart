@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:tether_social/services/CloudflareKeyService.dart';
 import 'package:tether_social/services/CloudStorageService.dart';
 import 'package:tether_social/services/PostService.dart';
-import '../models/post.dart';
+import '../models/Post.dart';
 // Demo-only service for the audio demo screen.
 class DemoAudioService {
   final CloudflareKeyService _cloudflare = CloudflareKeyService();

@@ -1,10 +1,11 @@
 import'CloudflareKeyService.dart';
-import '../models/post.dart';
+import '../models/Post.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 class PostService{ 
- final FirebaseFirestore _db = FirebaseFirestore.instance;
+  final FirebaseFirestore _db;
+  PostService({FirebaseFirestore? db}) : _db = db ?? FirebaseFirestore.instance;
 
  Future<void> uploadPost({required Post post}) async {
    final docRef = _db.collection('posts').doc(post.postId);
