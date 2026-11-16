@@ -1,0 +1,4 @@
+Adam Montgomery, November 16th, 2026
+-Built EncryptionService file
+-Had tests made aswell, athough I haven't run them or used them
+
