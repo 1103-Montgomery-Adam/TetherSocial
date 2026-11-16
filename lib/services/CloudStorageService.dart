@@ -5,7 +5,8 @@ import 'dart:typed_data';
 import 'package:firebase_storage/firebase_storage.dart';
 
 class CloudStorageService {
-  final FirebaseStorage _storage = FirebaseStorage.instance;
+  final FirebaseStorage _storage;
+  CloudStorageService({FirebaseStorage? storage}) : _storage = storage ?? FirebaseStorage.instance;
 
   // Uploads audio data to firebase storage
   Future<String> uploadAudio({
