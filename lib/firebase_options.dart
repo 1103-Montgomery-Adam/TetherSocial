@@ -52,28 +52,26 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCaYXxJNCVpD9tv6hpMXtJTROiycWrCEAY',
-    appId: '1:336028791871:android:cc52f5df26ffeb7548b48a',
+    appId: '1:336028791871:android:3a222025551b108448b48a',
     messagingSenderId: '336028791871',
     projectId: 'tether-11731',
     storageBucket: 'tether-11731.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCNo_14RDm0kbk2CuGuPICbR-IqHrOtgco',
-    appId: '1:336028791871:ios:bc4ff46f63eb999b48b48a',
+    appId: '1:336028791871:ios:0b3e869b6fd53fcb48b48a',
     messagingSenderId: '336028791871',
     projectId: 'tether-11731',
     storageBucket: 'tether-11731.firebasestorage.app',
-    iosBundleId: 'com.example.tetherSocial',
+    iosBundleId: 'com.tethersocial.app',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCNo_14RDm0kbk2CuGuPICbR-IqHrOtgco',
-    appId: '1:336028791871:ios:bc4ff46f63eb999b48b48a',
+    appId: '1:336028791871:ios:0b3e869b6fd53fcb48b48a',
     messagingSenderId: '336028791871',
     projectId: 'tether-11731',
     storageBucket: 'tether-11731.firebasestorage.app',
-    iosBundleId: 'com.example.tetherSocial',
+    iosBundleId: 'com.tethersocial.app',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
