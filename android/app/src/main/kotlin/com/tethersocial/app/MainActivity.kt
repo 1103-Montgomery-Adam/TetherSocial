@@ -1,4 +1,4 @@
-package com.example.tether_social
+package com.tethersocial.app
 
 import io.flutter.embedding.android.FlutterActivity
 
